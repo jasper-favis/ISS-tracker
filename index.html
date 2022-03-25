@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.sound.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8" />
+
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <h4>The <br>International Space<br> Station Tracker</h4>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+
+  <table id="canvas-bg">
+    <tr>
+      <td id="ctrlPanel">
+        
+                <div id="data">
+        <div id="vel">Velocity (km/h)
+          <div id="velocity">unavailable</div>
+        </div>
+        <div id="alt">Altitude (km)
+          <div id="altitude">unavailable</div>
+        </div>
+                            </div>
+        
+        
+        
+        <div id="slider">Zoom<br>
+          <span id="rangeValue">0</span>
+          <input type="range" class="range" name="" value="3" min="0" max="20"             onmousemove="rangeSlider(this.value)" onchange="rangeSlider(this.value)">
+        </div>
+
+        <ul>
+          <li id="mapStyle">Map Style
+            <ul id="dropdown">
+              <li class="sel" id="light">Light</li>
+              <li class="sel" id="dark">Dark</li>
+              <li class="sel" id="terrain">Terrain 1</li>
+              <li class="sel" id="terrainStreets">Terrain 2</li>
+            </ul>
+          </li>
+        </ul>
+        
+                            
+      </td>
+
+
+      <td id="canvas-pos">
+      </td>
+    </tr>
+  </table>
+  <script src="sketch.js"></script>
+</body>
+
+</html>
